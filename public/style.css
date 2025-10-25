@@ -30,17 +30,17 @@ a {
     padding: 0.5%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 850px) {
     #main {
-        grid-template-columns: 99%;
+        grid-template-columns: 48.7% 48.7%;
         column-gap: 1.5%;
         row-gap: 1.5%;
         padding: 0.5%;
     }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 500px) {
     #main {
-        grid-template-columns: 48.7% 48.7%;
+        grid-template-columns: 99%;
         column-gap: 1.5%;
         row-gap: 1.5%;
         padding: 0.5%;
