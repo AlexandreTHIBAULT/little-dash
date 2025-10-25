@@ -1,0 +1,42 @@
+title: Little Dashboard
+subtitle: Yreln server
+backgroundColor: "#242229"
+color: "#FFFFFE"
+sectionColor: "#5CC2D8"
+itemColor: "#383443"
+sections:
+- title: Dev
+  color: "#D8705C"
+  icon: mdi mdi-code-array
+  items:
+    - name: Portainer
+      icon: mdi mdi-truck-cargo-container
+      link: https://192.168.1.80:9443
+    - name: Gitea
+      icon: mdi mdi-tea
+      link: http://192.168.1.80:3000
+    - name: Recipies API
+      icon: mdi mdi-chart-pie
+      link: http://192.168.1.80:7000/api/v1/
+    - name: Draw.io
+      icon: mdi mdi-drawing-box
+      link: https://192.168.1.80:8777
+
+- title: Media
+  color: "#86D85C"
+  icon: mdi mdi-folder-play
+  items:
+    - name: Immich
+      icon: mdi mdi-image-multiple
+      link: http://192.168.1.80:2283
+
+- title: Other
+  icon: mdi mdi-octagram
+  color: "#5CC2D8"
+  items:
+    - name: Crafty
+      icon: mdi mdi-pickaxe
+      link: https://192.168.1.80:8443
+    - name: Recipies
+      icon: mdi mdi-chart-pie
+      link: http://192.168.1.80:5000

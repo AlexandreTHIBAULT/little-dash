@@ -1,0 +1,103 @@
+body {
+    background-color: #181C2E;
+    color: #C2C7CB;
+    font-family: "Cascadia Code";
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    text-align: center;
+}
+
+#title {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+#subtitle {
+    margin-top: 0;
+}
+
+#main {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 1.5%;
+    row-gap: 1.5%;
+    padding: 0.5%;
+}
+
+@media only screen and (max-width: 850px) {
+    #main {
+        grid-template-columns: 48.7% 48.7%;
+        column-gap: 1.5%;
+        row-gap: 1.5%;
+        padding: 0.5%;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #main {
+        grid-template-columns: 23.6% 23.6% 23.6% 23.6%;
+        column-gap: 1.5%;
+        row-gap: 1.5%;
+        padding: 0.5%;
+    }
+}
+
+.section {
+    background-color: #4079A4;
+    padding: 0.3em;
+    height: fit-content;
+    border-radius: 1em;
+    border: #000000 solid 2px;
+    
+}
+
+.section-title {
+    margin: 0;
+    margin-bottom: 0.3em;
+    margin-right: 0.5rem;
+    text-align: center;
+    color: #181C2E;
+    font-size: 1.6em;
+    display: flex;
+    justify-content: center;
+}
+
+.section-title > span {
+    padding-right: 0.5rem;
+}
+
+.section-items {
+    background-color: #181C2E;
+    border-radius: 0.82em;
+    padding: 0.5em;
+    border: #000000 solid 2px;
+}
+
+.item {
+    margin: 0.5em;
+    border-radius: 0.63em;
+    background-color: #333355;
+    border: #000000 solid 2px;
+    border-bottom: #000000 solid 6px;
+
+    color: #C2C7CB;
+    font-size: 1rem;
+    display: flex;
+    padding-right: 2em;
+
+}
+
+.item > span {
+    padding: 0.5rem 0.3em;
+    font-size: 3rem;
+    width: 50px;
+}
+
+.item > p {
+    text-wrap: wrap;
+}

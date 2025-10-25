@@ -1,0 +1,10 @@
+services:
+  little-dash:
+    build: .
+    container_name: little-dash
+    ports:
+      - "7654:8080"
+    volumes:
+      - type: bind
+        source: config
+        target: /build/config

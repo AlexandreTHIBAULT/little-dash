@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cascadia Code">
+    <link rel="stylesheet" href="style.css">
+    <title>Little Dash</title>
+</head>
+
+<body style="background-color: <%= backgroundColor %>;">
+    <div id="header">
+        <h1 id="title" style="color: <%= color %>;">
+            <%= title %></h1>
+        <p id="subtitle" style="color: <%= color %>;">
+            <%= subtitle %></p>
+    </div>
+
+    <div id="main">
+        <% for(const section of sections) { %>
+            <div class="section" style="background-color: <%= sectionColor %>; background-color: <%= section.color %>;">
+                <h2 class="section-title" style="color: <%= backgroundColor %>;">
+                    <span class="<%= section.icon %>"></span>
+                    <%= section.title %></h2>
+                <div class="section-items" style="background-color: <%= backgroundColor %>;">
+                    <% for(const item of section.items) { %>
+                        <a target="_blank" href="<%= item.link %>">
+                            <div class="item" style="color: <%= color %>; background-color: <%= itemColor %>;">
+                                <span class="<%= item.icon %>"></span>
+                                <p><%= item.name %></p>
+                            </div>
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+</body>
+
+</html>
