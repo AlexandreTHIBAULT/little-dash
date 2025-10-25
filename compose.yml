@@ -2,6 +2,7 @@ services:
   little-dash:
     build: .
     container_name: little-dash
+    restart: always
     ports:
       - "7654:8080"
     volumes:
