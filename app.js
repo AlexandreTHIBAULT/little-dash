@@ -5,6 +5,8 @@ const fs   = require('fs');
 const app = express();
 const PORT = 8080;
 
+const config_file = 'config/' + process.env.CONFIG_FILE;
+
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
 
@@ -16,7 +18,12 @@ try {
     
 
     app.get('/', (req, res) => {
-        const config = yaml.load(fs.readFileSync('config/config.yml', 'utf8'));
+        const config = yaml.load(fs.readFileSync(config_file, 'utf8'));
+
+        if(!('sections' in config)) {
+            config.sections = []
+        }
+
         res.render('index', config);
     });
 

@@ -4,8 +4,12 @@ services:
     container_name: little-dash
     restart: always
     ports:
-      - "7654:8080"
+      - "8080:8080"
     volumes:
       - type: bind
         source: config
         target: /build/config
+    environment:
+      CONFIG_FILE: ${CONFIG_FILE}
+    env_file:
+      - .env

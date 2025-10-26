@@ -19,22 +19,26 @@
     </div>
 
     <div id="main">
-        <% for(const section of sections) { %>
-            <div class="section" style="background-color: <%= sectionColor %>; background-color: <%= section.color %>;">
-                <h2 class="section-title" style="color: <%= backgroundColor %>;">
-                    <span class="<%= section.icon %>"></span>
-                    <%= section.title %></h2>
-                <div class="section-items" style="background-color: <%= backgroundColor %>;">
-                    <% for(const item of section.items) { %>
-                        <a target="_blank" href="<%= item.link %>">
-                            <div class="item" style="color: <%= color %>; background-color: <%= itemColor %>;">
-                                <span class="<%= item.icon %>"></span>
-                                <p><%= item.name %></p>
-                            </div>
-                        </a>
-                    <% } %>
+        <% if(Array.isArray(sections)){ %>
+            <% for(const section of sections) { %>
+                <div class="section" style="background-color: <%= sectionColor %>; background-color: <%= section.color %>;">
+                    <h2 class="section-title" style="color: <%= backgroundColor %>;">
+                        <span class="<%= section.icon %>"></span>
+                        <%= section.title %></h2>
+                    <div class="section-items" style="background-color: <%= backgroundColor %>;">
+                        <% if("items" in section && Array.isArray(section.items)){ %>
+                            <% for(const item of section.items) { %>
+                                <a target="_blank" href="<%= item.link %>">
+                                    <div class="item" style="color: <%= color %>; background-color: <%= itemColor %>;">
+                                        <span class="<%= item.icon %>"></span>
+                                        <p><%= item.name %></p>
+                                    </div>
+                                </a>
+                            <% } %>
+                        <% } %>
+                    </div>
                 </div>
-            </div>
+            <% } %>
         <% } %>
     </div>
 

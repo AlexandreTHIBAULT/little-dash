@@ -1,0 +1,16 @@
+title: Little Dashboard
+subtitle: Example
+backgroundColor: "#FFFFFF"
+color: "#000000"
+sectionColor: "#000000"
+itemColor: "#FFFFFF"
+sections:
+- title: Hello
+  icon: mdi mdi-human-greeting-variant
+  items:
+    - name: Source code
+      icon: mdi mdi-github
+      link: https://github.com/AlexandreTHIBAULT/little-dash
+    - name: Little Dash Wiki
+      icon: mdi mdi-file-document-outline
+      link: https://github.com/AlexandreTHIBAULT/little-dash/wiki
